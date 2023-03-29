@@ -19,10 +19,10 @@ torch.manual_seed(0)
 torch.cuda.manual_seed(0)
 
 ## SETTINGS ##
-rand_netw = True
+rand_netw = False
 source_model = 'sepformer'
 RESULTDIR = f'/Users/gt/Documents/GitHub/aud-dnn/aud_dnn/model-actv/{source_model}/'
-sound_level_check = 0.1 # If not None, multiply the sound by this value and extract model activations
+sound_level_check = None # If not None, multiply the sound by this value and extract model activations
 
 if sound_level_check is not None:
 	print(f'WARNING: Sound level check is set to {sound_level_check}')
