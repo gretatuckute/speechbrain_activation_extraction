@@ -20,7 +20,7 @@ torch.cuda.manual_seed(0)
 
 ## SETTINGS ##
 rand_netw = False
-source_model = 'sepformer'
+source_model = 'metricGAN'
 RESULTDIR = f'/Users/gt/Documents/GitHub/aud-dnn/aud_dnn/model-actv/{source_model}/'
 sound_level_check = None # If not None, multiply the sound by this value and extract model activations
 
@@ -238,7 +238,7 @@ if __name__ == '__main__':
 		
 		### LOOP OVER AUDIO FILES ###
 		for filename in tqdm(wav_files_paths):
-			# filename = '/Users/gt/Documents/GitHub/aud-dnn/data/stimuli/165_natural_sounds_16kHz/stim83_cicadas_TESTx10.wav'
+
 			# Write hooks for the model
 			save_output = SaveOutput(rand_netw=rand_netw)
 			
